@@ -2,24 +2,24 @@ package com.HelloAppx;
 import java.util.*;
 public class HelloApp 
 {
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-        String name = "World";
+        String finalName = "World";
         if (args.length > 0) 
         {
             StringBuilder nameBuilder = new StringBuilder();
-            for (int i = 0; i < args.length; i++) 
+            boolean first = true;
+            for (String name : args) 
             {
-                nameBuilder.append(args[i]);
-
-                if (i < args.length - 1) 
+                if (!first) 
                 {
                     nameBuilder.append(", ");
                 }
+                nameBuilder.append(name);
+                first = false;
             }
-            name = nameBuilder.toString();
+            finalName = nameBuilder.toString();
         }
-
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + finalName + "!");
     }
 }
