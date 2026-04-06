@@ -1,12 +1,14 @@
 package com.HelloAppx;
 import java.util.*;
-public class HelloApp
+public class HelloApp 
 {
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Please enter your name");
-        String n=sc.nextLine();
-        System.out.println("Hello "+n+" !");
+        String name ="World ";
+        if(args.length>0)
+        {
+            name =args[0];
+        }
+        System.out.println("Hello " + name +"!");
     }
 }
